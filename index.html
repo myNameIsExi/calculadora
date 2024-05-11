@@ -1,33 +1,42 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clculadora HTML</title>
-   <script src="./index.js" defer></script>
-    <style>
-        body{
-            font-family: sans sans-serif;
-            text-align: center;
-        }
-        input{
-            display: block;
-            margin:auto;
-            margin-bottom: 15px ;
-        }
-    </style>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="index.css">
+    
 </head>
 <body>
-    <h1>Calculadora HTML </h1>
-    <form action="" method="dialog"> 
-    <input type="text"  id="op1" placeholder="operador 1">
-    <input type="text"  id="operacion" placeholder="+, -, *, /">
-    <input type="text"  id="op2" placeholder="operador 2">
     
-    <input type="submit" value="Calcular" id="calcular">
-</form>
-    <p id="resultado"></p>
-
+    <div class="calculator">
+        <div class="calculator-header">
+            <h1>Calculadora</h1>
+        </div>
+        <div class="display">
+            <input type="text" id="display" disabled>
+        </div>
+        <div class="keys">
+            <button class="operator" onclick="appendCharacter('/');">÷</button>
+            <button class="operator" onclick="appendCharacter('*');">x</button>
+            <button class="operator" onclick="appendCharacter('-');">-</button>
+            <button class="operator" onclick="appendCharacter('+');">+</button>
+            <button onclick="appendCharacter('7');">7</button>
+            <button onclick="appendCharacter('8');">8</button>
+            <button onclick="appendCharacter('9');">9</button>
+            <button onclick="appendCharacter('4');">4</button>
+            <button onclick="appendCharacter('5');">5</button>
+            <button onclick="appendCharacter('6');">6</button>
+            <button onclick="appendCharacter('1');">1</button>
+            <button onclick="appendCharacter('2');">2</button>
+            <button onclick="appendCharacter('3');">3</button>
+            <button onclick="appendCharacter('0');">0</button>
+            <button onclick="clearDisplay();">C</button>
+            <button onclick="calculateResult();">=</button>
+        </div>
+    </div>
+    <script src="java.js"></script>
 </body>
 </html>
